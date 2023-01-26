@@ -1,17 +1,13 @@
 body {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
     background: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(cover.jpg);
     background-size: cover;
     background-position: center;
     font-family: Arial, Helvetica, sans-serif;
 }
-
-.container {
-    height: 100vh;
-    width: 100%;
-}
-
+/* Home */
 .nav-bar {
     display: flex;
     align-items: center;
@@ -21,18 +17,8 @@ body {
 
 .nav-bar .title {
     color: #ffff;
-    font-size: 67px;
+    font-size: 50px;
     font-weight: 600;
-}
-
-.nav-bar p {
-    position: absolute;
-    margin-top: 100px;
-    margin-left: 50px;
-    color: #ffff;
-    font-size: 20px;
-    font-weight: 500;
-    font-family: Arial, Helvetica, sans-serif;
 }
 
 span {
@@ -52,20 +38,50 @@ span {
     font-weight: 650;
 }
 
-.logo {
-    margin: auto;
-    width: 300px;
-    height: 300px;
-    margin-top: 15vh;
+.content {
+    color:white;
+    text-align: center;
+    padding-top: 50px;
+    font-size: 20px;
 }
 
-.logo img {
-    height: 300px;
-    width: 300px;
-    object-fit: contain;
+.content{
+    -webkit-animation: fadeInTop 1.2s both;
+    -moz-animation: fadeInTop 1.2s both;
+    -o-animation: fadeInTop 1.2s both;
+    animation: fadeInTop 1.2s both;
+    margin-top: 330px;
+}
+@keyframes fadeInTop {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
-.logo button {
+.center {
+    width:100%;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.center img {
+    height: 300px;
+    width: 300px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+} 
+
+.center button {
     height: 40px;
     color: #fff;
     background: rgb(8, 179, 79);
@@ -76,15 +92,18 @@ span {
     border-radius: 5px;
     transition: .4s ease;
     cursor: pointer;
-    margin-left: 30%;
+    position: relative;
 }
 
-.logo button a {
+.center button a {
     text-decoration: none;
     color: #fff;
 }
 
-.logo button:hover {
+.center button:hover {
     background: none;
     border: 1px solid rgb(8, 179, 79);
 }
+
+/* Contact Us */
+
